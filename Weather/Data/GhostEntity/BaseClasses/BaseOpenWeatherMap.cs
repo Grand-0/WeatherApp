@@ -6,13 +6,6 @@ namespace WeatherAppWPF.Data.GhostEntity.BaseClasses
 {
     public abstract class BaseOpenWeatherMap
     {
-        public BaseOpenWeatherMap(string firstT, string name, string secondT)
-        {
-            FirstToken = firstT;
-            CityName = name;
-            SecondToken = secondT;
-        }
-
         public string FirstToken { get; set; }
         public string CityName { get; set; }
         public string SecondToken { get; set; }

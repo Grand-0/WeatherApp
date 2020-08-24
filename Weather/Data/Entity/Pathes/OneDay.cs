@@ -7,6 +7,11 @@ namespace WeatherAppWPF.Data.RequestPath
 {
     public class OneDay : BaseOpenWeatherMap
     {
-        
+        public OneDay(string firstT, string name, string secondT)
+        {
+            FirstToken = firstT;
+            CityName = name;
+            SecondToken = secondT;
+        }
     }
 }
