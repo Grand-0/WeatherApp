@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WeatherAppWPF.Data.ViewModels;
 
 namespace WeatherAppWPF
 {
@@ -20,6 +21,17 @@ namespace WeatherAppWPF
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private OneDayViewModel data;
+
+        private void GetWeatherOneDay_Click(object sender, RoutedEventArgs e)
+        {
+            if(CityName.Text != "")
+            {
+                data = new OneDayViewModel(CityName.Text);
+                WeatherTest.Text = Convert.ToString(data.GetWindSpeed());
+            }
         }
     }
 }

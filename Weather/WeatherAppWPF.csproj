@@ -7,7 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Data\Images\icon-exit.jpg" />
+    <None Remove="Data\Images\icon-home.jpg" />
+    <None Remove="Data\Images\icon-parameters.jpg" />
+    <None Remove="Data\Images\icon-style.jpg" />
+    <None Remove="Data\Images\ImageBack.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Data\Images\icon-exit.jpg" />
+    <Resource Include="Data\Images\icon-home.jpg" />
+    <Resource Include="Data\Images\icon-parameters.jpg" />
+    <Resource Include="Data\Images\icon-style.jpg" />
+    <Resource Include="Data\Images\ImageBack.jpg" />
   </ItemGroup>
 
 </Project>

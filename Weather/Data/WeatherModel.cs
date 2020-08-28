@@ -11,17 +11,17 @@ namespace Weather.Data
     public class WeatherModel
     {
         [JsonProperty("weather")]
-        public Desc desc { get; set; }
+        public Desc desc { get; set; } //+
         [JsonProperty("coord")]
-        public Coordinate coordinate { get; set; }
+        public Coordinate coordinate { get; set; } //+
         [JsonProperty("name")]
-        public City city { get; set; }
+        public City city { get; set; } //+
         [JsonProperty("main")]
-        public Parameters parameters { get; set; }
+        public Parameters parameters { get; set; } //+
         [JsonProperty("sys")]
-        public Info info { get; set; }
+        public Info info { get; set; } //+
 
         [JsonProperty("wind")]
-        public Wind wind { get; set; }
+        public Wind wind { get; set; } //+
     }
 }
