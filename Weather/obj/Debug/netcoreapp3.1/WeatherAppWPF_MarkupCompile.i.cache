@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 D:\Programming\С#\WPF\Weather\Weather\App.xaml
-11151548125
+51423757707
 
-19974490241
+211171466851
 193-1734716895
-MainWindow.xaml;
+Views\HomePage.xaml;Views\OneDayPages.xaml;Views\Options.xaml;Views\Style.xaml;Views\Stylesheet.xaml;
 
-False
+True
 

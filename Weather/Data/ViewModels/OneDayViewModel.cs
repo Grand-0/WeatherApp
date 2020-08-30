@@ -1,4 +1,6 @@
-﻿using Weather.Data;
+﻿using System.Linq;
+using Weather.Data;
+using WeatherAppWPF.Data.Entity.WeatherEntities;
 
 namespace WeatherAppWPF.Data.ViewModels
 {
@@ -6,53 +8,45 @@ namespace WeatherAppWPF.Data.ViewModels
     {
         public OneDayViewModel(string city)
         {
-            OneDayData data = new OneDayData("api.openweathermap.org/data/2.5/weather?q=", city, "&appid=");
+            OneDayData data = new OneDayData(city);
             model = data.GetWeather();
+            desc = model.descriptions.First();
         }
 
         private WeatherModel model;
+        private Desc desc;
 
         public string GetCityName()
         {
-            return model.city.Name;
+            return model.cityName;
         }
 
-        public string GetLongitude()
+        public float GetLongitude()
         {
             return model.coordinate.Longitude;
         }
 
-        public string GetLatitude()
+        public float GetLatitude()
         {
             return model.coordinate.Latitude;
         }
 
-        public string GetWeatherDescription()
+        public float GetTempInCelsius()
         {
-            return model.desc.WeatherDescription;
+            return (model.parameters.TempInKelvin - 273.15f);
         }
 
-        public string GetWeatherState()
+        public float GetTempFeelLike_InCelsius()
         {
-            return model.desc.State;
+            return (model.parameters.FeelsLikeInKelvin - 273.15f);
         }
 
-        public decimal GetTempInCelsius()
-        {
-            return (model.parameters.TempInKelvin - 273.15M);
-        }
-
-        public decimal GetTempFeelLike_InCelsius()
-        {
-            return (model.parameters.FeelsLikeInKelvin - 273.15M);
-        }
-
-        public decimal GetPressure()
+        public float GetPressure()
         {
             return model.parameters.Pressure;
         }
 
-        public decimal GetHumidity()
+        public float GetHumidity()
         {
             return model.parameters.Humidity;
         }
@@ -67,7 +61,17 @@ namespace WeatherAppWPF.Data.ViewModels
             return model.info.CountryName;
         }
 
-        public decimal GetWindSpeed()
+        public string GetDescription()
+        {
+            return desc.Description; 
+        }
+
+        public string GetLongDescription()
+        {
+            return desc.LongDescription;
+        }
+
+        public float GetWindSpeed()
         {
             return model.wind.Speed;
         }

@@ -5,15 +5,15 @@ namespace Weather.Entity
     public class Parameters
     {
         [JsonProperty("temp")]
-        public decimal TempInKelvin { get; set; }
+        public float TempInKelvin { get; set; }
 
         [JsonProperty("feels_like")]
-        public decimal FeelsLikeInKelvin { get; set; }
+        public float FeelsLikeInKelvin { get; set; }
 
         [JsonProperty("pressure")]
-        public decimal Pressure { get; set; }
+        public float Pressure { get; set; }
 
         [JsonProperty("humidity")]
-        public decimal Humidity { get; set; }
+        public float Humidity { get; set; }
     }
 }

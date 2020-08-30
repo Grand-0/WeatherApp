@@ -14,9 +14,9 @@ namespace WeatherAppWPF.Data.ViewModels
         private ParseOneDay parse;
         private DeserializeOneDayResponse response;
 
-        public OneDayData(string firstTocken, string cityName, string SecondTocken)
+        public OneDayData(string cityName)
         {
-            Today = new OneDay(firstTocken, cityName, SecondTocken);
+            Today = new OneDay(cityName);
             parse = new ParseOneDay();
             response = new DeserializeOneDayResponse();
         }
@@ -24,7 +24,7 @@ namespace WeatherAppWPF.Data.ViewModels
         public WeatherModel GetWeather()
         {
             WeatherModel weather = new WeatherModel();
-            return response.GetWeatherInfo(parse.GetResponce(Today), weather);
+            return response.GetWeatherInfo(parse.GetResponce(Today));
         }
     }
 }

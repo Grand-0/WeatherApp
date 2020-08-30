@@ -10,19 +10,20 @@ namespace WeatherAppWPF.Data.Parse
         public string GetResponce(OneDay Path)
         {
             string parseString = "";
+            string path = $"{Path.FirstToken}{Path.CityName}{Path.SecondToken}{Path.RequestKey}";
 
-            HttpWebRequest request = (HttpWebRequest)WebRequest.CreateHttp($"{Path.FirstToken}{Path.CityName}{Path.SecondToken}{Path.RequestKey}");
+            HttpWebRequest request = (HttpWebRequest)WebRequest.CreateHttp(path);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
             using (Stream stream = response.GetResponseStream())
             {
                 using (StreamReader reader = new StreamReader(stream))
                 {
-                    while(reader.ReadLine() != null)
-                    {
-                        parseString += reader.ReadLine();
-                    }
+                    parseString = reader.ReadToEnd();
                 }
             }
+
+            response.Close();
             return parseString;
         }
     }

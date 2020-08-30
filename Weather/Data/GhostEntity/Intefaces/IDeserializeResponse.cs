@@ -7,6 +7,6 @@ namespace WeatherAppWPF.Data.GhostEntity.Intefaces
 {
     public interface IDeserializeResponse
     {
-        WeatherModel GetWeatherInfo(string jsonString, WeatherModel deserializationModel);
+        WeatherModel GetWeatherInfo(string jsonString);
     }
 }

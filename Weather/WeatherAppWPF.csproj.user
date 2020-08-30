@@ -7,12 +7,33 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="MainWindow.xaml.cs">
+    <Compile Update="Views\HomePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\OneDayPages.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Options.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Style.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Page Update="Views\HomePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\OneDayPages.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Options.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Style.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Stylesheet.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

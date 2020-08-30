@@ -5,6 +5,6 @@ namespace Weather.Entity
     public class Wind
     {
         [JsonProperty("speed")]
-        public decimal Speed { get; set; }
+        public float Speed { get; set; }
     }
 }

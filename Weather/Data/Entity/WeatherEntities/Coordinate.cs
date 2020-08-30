@@ -5,9 +5,9 @@ namespace Weather.Entity
     public class Coordinate
     {
         [JsonProperty("lon")]
-        public string Longitude { get; set; }
+        public float Longitude { get; set; }
 
         [JsonProperty("lat")]
-        public string Latitude { get; set; }
+        public float Latitude { get; set; }
     }
 }

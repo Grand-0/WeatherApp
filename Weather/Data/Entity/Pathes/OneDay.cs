@@ -7,11 +7,11 @@ namespace WeatherAppWPF.Data.RequestPath
 {
     public class OneDay : BaseOpenWeatherMap
     {
-        public OneDay(string firstT, string name, string secondT)
+        public OneDay(string name)
         {
-            FirstToken = firstT;
+            FirstToken = "https://api.openweathermap.org/data/2.5/weather?q=";
             CityName = name;
-            SecondToken = secondT;
+            SecondToken = "&appid=";
         }
     }
 }
